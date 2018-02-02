@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EX8</string>
+    <string name="intro">Hello, you can use this application to check your skills on temperature conversio, or calculate the correct value.</string>
+    <string name="tvC">Celcius</string>
+    <string name="tvF">Farenheit</string>
+    <string name="bGo">Go!</string>
+    <string name="rbCheck">Check</string>
+    <string name="rbCalc">Calculate</string>
+    <string name="bR">Return</string>
+</resources>
