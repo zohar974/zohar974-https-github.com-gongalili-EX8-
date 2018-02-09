@@ -39,11 +39,19 @@ public class MainActivity extends Activity {
 
             }
 
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
 
             public void onTextChanged(CharSequence s, int start, int before, int count)
             {
-                if(rCa != null && rCa.isChecked() && field1.getText().toString().length() >0)
+                if(rCa != null && rCa.isChecked()  && field1.getText().toString().length() >0 && field2.getText().toString().length() >0)
+                {
+                    go.setEnabled(false);
+                    field2.setEnabled(false);
+                    field1.setEnabled(false);
+                }
+                else if(rCa != null && rCa.isChecked() && field1.getText().toString().length() >0)
                 {
                     field2.setEnabled(false);
                     go.setEnabled(true);
@@ -74,11 +82,19 @@ public class MainActivity extends Activity {
 
             }
 
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
 
             public void onTextChanged(CharSequence s, int start, int before, int count)
             {
-                if(rCa != null && rCa.isChecked() && field2.getText().toString().length() >0)
+                if(rCa != null && rCa.isChecked()  && field1.getText().toString().length() >0 && field2.getText().toString().length() >0)
+                {
+                    go.setEnabled(false);
+                    field2.setEnabled(false);
+                    field1.setEnabled(false);
+                }
+                else if(rCa != null && rCa.isChecked() && field2.getText().toString().length() >0)
                 {
                     field1.setEnabled(false);
                     go.setEnabled(true);
@@ -117,6 +133,25 @@ public class MainActivity extends Activity {
             field1.setEnabled(false);
             field2.setEnabled(false);
         }
+        if(rCa != null && rCa.isChecked()  && field1.getText().toString().length() >0 && field2.getText().toString().length() >0)
+        {
+            go.setEnabled(false);
+            field2.setEnabled(false);
+            field1.setEnabled(false);
+        }
+        else if(rCh != null && rCh.isChecked()  && (field1.getText().toString().length() >0 || field2.getText().toString().length() >0))
+        {
+            go.setEnabled(true);
+            field2.setEnabled(true);
+            field1.setEnabled(true);
+        }
+        else if(rCa != null && rCa.isChecked()  &&(field1.getText().toString().length() >0 || field2.getText().toString().length() >0))
+        {
+            go.setEnabled(true);
+            field2.setEnabled(true);
+            field1.setEnabled(true);
+        }
+
     }
     public void sendMessage(View view)
     {
